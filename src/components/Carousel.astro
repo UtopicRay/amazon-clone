@@ -1,79 +1,109 @@
 <div class="relative">
-  <button id="prev" class="absolute min-w-8 bg-gray-500 p-2 text-black z-20 top-1/4 mx-2 left-3"> Hola</button>
-  <button id="next" class="absolute min-w-8 bg-gray-500 p-2 text-black z-20 top-1/4 mx-2 right-3"> Hola</button>
-  <ul id="carousel" class="flex overflow-y-hidden">
-    <img src="" alt="" class="carousel-item" /><img
+  <button
+    id="prev"
+    class="absolute min-w-8 bg-gray-500 p-2 text-black z-20 top-1/4 mx-2 left-3"
+  >
+    Hola</button
+  >
+  <button
+    id="next"
+    class="absolute min-w-8 bg-gray-500 p-2 text-black z-20 top-1/4 mx-2 right-3"
+  >
+    Hola</button
+  >
+  <ul id="carousel" class="carousel">
+    <img
       src="./assets/header1.jpg"
       alt=""
       class="carousel-item"
-    /><img src="" alt="" class="carousel-item" /><img
+    /><img
       src="./assets/header2.jpg"
       alt=""
       class="carousel-item"
     />
-    <img src="" alt="" class="carousel-item" /><img
+    <img
       src="./assets/header3.jpg"
       alt=""
       class="carousel-item"
     />
-    <img src="" alt="" class="carousel-item" /><img
+    <img
       src="./assets/header4.jpg"
       alt=""
       class="carousel-item"
-    /><img src="" alt="" class="carousel-item" /><img
+    /><img
       src="./assets/header5.jpg"
       alt=""
       class="carousel-item"
     />
-    <img src="" alt="" class="carousel-item" /><img
+  <img
       src="/assets/header6.jpg"
       alt=""
       class="carousel-item"
     />
   </ul>
 </div>
-  <ul class="flex overflow-y-hidden">
-    <img src="" alt="" class="carousel-item" /><img
-      src="./assets/header1.jpg"
-      alt=""
-      class="carousel-item"
-    /><img src="" alt="" class="carousel-item" /><img
-      src="./assets/header2.jpg"
-      alt=""
-      class="carousel-item"
-    />
-    <img src="" alt="" class="carousel-item" /><img
-      src="./assets/header3.jpg"
-      alt=""
-      class="carousel-item"
-    />
-    <img src="" alt="" class="carousel-item" /><img
-      src="./assets/header4.jpg"
-      alt=""
-      class="carousel-item"
-    /><img src="" alt="" class="carousel-item" /><img
-      src="./assets/header5.jpg"
-      alt=""
-      class="carousel-item"
-    />
-    <img src="" alt="" class="carousel-item" /><img
-      src="/assets/header6.jpg"
-      alt=""
-      class="carousel-item"
-    />
-  </ul>
-</div>
+
 <style>
+  .carousel{
+    display: flex;
+    overflow: hidden;
+  }
+  @keyframes carousel {
+    0%{ transform: translateX(0%);}
+    15%{ transform: translate(0%);}
+    
+    20%{ transform: translateX(-100%);}
+    35%{ transform: translate(-100%);}
+
+    40%{ transform: translateX(-200%);}
+    55%{ transform: translate(-200%);}
+    
+    60%{ transform: translateX(-300%);}
+    75%{ transform: translate(-300%);}
+
+    80%{ transform: translateX(-400%);}
+    90%{ transform: translate(-400%);}
+    
+    95%{ transform: translateX(-500%);}
+    100%{ transform: translate(-500%);}
+  
+  }
   .carousel-item {
     mask-image: linear-gradient(to bottom, #000000 50%, transparent 100%);
+    animation: carousel 30s infinite alternate ease-in-out;
   }
 </style>
+<!-- 
 <script>
-    var carouselImgs=document.querySelectorAll('.carousel-item');
-    var prevButton=document.getElementById('prev');
-    var nextButton=document.getElementById('next');
-  
-    function ChangeImgs(){
+  var carouselImgs=document.querySelectorAll('.carousel-item');
+  var prevButton=document.getElementById('prev');
+  var nextButton=document.getElementById('next');
+  var n=0;
+  function ChangeImgs(){
+    for (var i=0;i<carouselImgs.length;i++){
+      carouselImgs[i].style.display='none';
+    }
+    carouselImgs[n].style.display='block';
+  }
+  ChangeImgs();
+  prevButton.addEventListener('click', ()=>{
+    if(n>0){
+      n--;
+    }else{
+      n=carouselImgs.length-1;
+    ChangeImgs();
+    }
+  })
+  nextButton.addEventListener('click', ()=>{
+    if(n<carouselImgs.length-1){
+      n++;
+    }else{
+      n=0;
+    ChangeImgs();
     }
 
+  }
+)
 </script>
+
+-->
