@@ -3,7 +3,7 @@
         <img src="/assets/amazon_logo.png" width="100" alt="amazon_logo">    
     </a>
     <div class="flex">
-        <a>
+        <a class="mt-6 mr-1">
             <img src="/assets/location_icon.png" alt="location_icon" width="20" >
         </a>
     <div>
@@ -11,13 +11,13 @@
         <p class="font-bold">Cuba</p>
     </div>
     </div>
-    <form class="w-[1000px]">
+    <form class="xl:w-[600px] w-[1000px]">
         <div class="flex rounded-lg ">
-            <select class="select">
+            <select class="select" >
                 <option class="p-4 mr-2">All</option>
             </select>
             <input type="text" placeholder="Search Amazon" class="w-full p-2">
-            <button type="submit" class="bg-yellow-600" class="search">
+            <button type="submit" class="bg-yellow-600 search flex justify-center" >
                 <img src="/assets/search_icon.png" width="30">
             </button>
         </div>
@@ -33,7 +33,11 @@
     <div>
         <p class="text-sm">Returns <br><span class="font-bold">& Orders</span>  </p>
     </div>
-    <img src="/assets/cart_icon.png" alt="cart_icon" width="40">
+    <div class="flex hover:border-white hover:boder-[1px] p-2">
+        <img src="/assets/cart_icon.png" alt="cart_icon" width="40">
+        <p class="font-bold mt-4">Carrito</p>
+    </div>
+    
 </nav>
 <div class="flex bg-gray-800 gap-2 max-h-14">
     <div class="flex justify-center items-center gap-2 m-2"><img src="/assets/menu_icon.png" alt="menu_icon" width="20">
@@ -53,9 +57,12 @@
     }
     .select{
         border-radius: 5px 0 0 5px;
+        width:15%;  
+        text-align:center;
     }
     .search{
         border-radius: 0 5px 5px 0;
+        width:10%;
     }
 
 </style>

@@ -2,13 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import  Navbar  from "../components/Navbar.astro";
 import Carousel from '../components/Carousel.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<Navbar/>
 	<main>
 		<Carousel/>
+		<section class="grid grid-cols-4 max-w-full p-4 mx-auto mt-[-20vw] mb-10 gap-x-4">
+			<Card title="Product" img="./assets/product1-1.jpg"></Card>
+			<Card title="Product" img="./assets/product1-1.jpg"></Card>
+			<Card title="Product" img="./assets/product1-1.jpg"></Card>
+			<Card title="Product" img="./assets/product1-1.jpg"></Card>
+		</section>
 	</main>
+	<Footer></Footer>
 </Layout>
 
 <style>
